@@ -9,7 +9,7 @@ Support Category: Premium
 
 *April 2019*
 
-This release fixes a number of issues in both EDIFACT and X12 EDI Connectors.
+=== Fixed in this Release
 
 EDIFACT EDI Connector:
 
