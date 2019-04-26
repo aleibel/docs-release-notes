@@ -13,20 +13,20 @@ Support Category: Premium
 
 EDIFACT EDI Connector:
 
-* Fix infinite loop when missing UNT segment. (SE-10442)
-* Add specific error message when missing UNT segment. (SE-10442)
-* Support integer value types for implied decimal format. (SE-11494)
-* Correct escape character handling on read. (SE-9795)
-* Eliminate NPE when space value set for delimiter character. (SE-11312)
-* Change shaded pacakge name for debugger compatibility. (SE-10796)
+* Fixed the infinite loop when missing a UNT segment. (SE-10442)
+* Added a specific error message when missing a UNT segment. (SE-10442)
+* Added support for integer value types for implied decimal format. (SE-11494)
+* Corrected escape character handling on read. (SE-9795)
+* Eliminated NPE when space value is set for a delimiter character. (SE-11312)
+* Changed the shaded package name for debugger compatibility. (SE-10796)
 
 X12 EDI Connector:
 
-* Support integer value types for implied decimal format. (SE-11494)
-* Correctly handle multiple HIPAA transaction sets in a group. (SE-9043)
-* Identify the ISA segment when it's the cause of a write error. (SE-10796)
-* Change shaded pacakge name for debugger compatibility. (SE-10796)
-* Add transaction set information to error message for schema not found. (SE-7935)
+* Added support for integer value types for implied decimal format. (SE-11494)
+* Multiple HIPAA transaction sets in a group are now correctly handled. (SE-9043)
+* Identified the ISA segment when it’s the cause of a write error. (SE-10796)
+* Changed the shaded package name for debugger compatibility. (SE-10796)
+* Added the transaction set information to the error message for 'schema not found'. (SE-7935)
 
 === Compatibility
 
