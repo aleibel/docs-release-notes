@@ -7,6 +7,24 @@ Support Category: Select
 
 The Email connector can send and retrieve email messages over the standard email protocols.
 
+== 1.1.5
+
+*May 8, 2019*
+
+=== Compatibility
+
+[%header%autowidth.spread]
+|===
+|Software |Version
+|Mule Runtime |4.1.1 and later
+|Anypoint Studio |7.1.1 and later
+|JDK |8
+|===
+
+=== Fixed Issues
+
+* Fixed a bug that made it impossible to send an email as an email attachment. (https://www.mulesoft.org/jira/browse/MULE-16617[MULE-16617])
+
 == 1.1.4
 
 *April 22, 2019*
