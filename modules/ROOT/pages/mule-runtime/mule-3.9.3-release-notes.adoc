@@ -77,6 +77,7 @@ xref:api-manager::api-gateway-encryption-mule3.adoc[Gateway Startup Encryption i
 | MULE-13751 | Issue with #[function.datestamp('yyyyMMdd')] extra ) added
 | MULE-11864 | Mule ObjectStore dispose method shouldn't delete partition_descriptor file
 | MULE-8787 | Cannot set an array element in a property from an enricher.
+| EE-6682 | Table name transforms in cluster object store are only working for postgresql
 | EE-6742 | Update jaxb to 2.3.1-MULE-001 in EE distribution
 | EE-6734 | HazelcastObjectStoreTestCase fail when you update Hazelcast to 3.12
 | EE-6616 | Add option to not recycle receiver in case of Connection Exception in WMQ
