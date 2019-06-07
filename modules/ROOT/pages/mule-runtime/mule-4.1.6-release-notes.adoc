@@ -168,6 +168,22 @@ Not applicable.
 * Fixes #381. Excel reader issue reading boolean values
 * [rn] Fixes SE-9664. Fix type inference problem what throwing empty.reduceLeft exception
 * [js] Fix for #358. Related to PROJECTX-4033. Error when setting literals to root arrays 
+
+| Scheduler Service a|
+// ------------------------------- 
+// - 1.1.8 (The version in 4.1.5 was 1.1.7)
+// ------------------------------- 
+* NPE when a customScheduler is shutting down itself. (https://www.mulesoft.org/jira/browse/MULE-16760[MULE-16760])
+* WARN logged when fixed rate task overlap in a single thread Scheduler. (https://www.mulesoft.org/jira/browse/MULE-16759[MULE-16759])
+* Race condition in ThreadGroup destroying for customScheduler threadGrou. (https://www.mulesoft.org/jira/browse/MULE-16516[MULE-16516])
+// ------------------------------- 
+// - 1.1.9
+// -------------------------------
+* Setting low heap memory in multicore machine causes Mule to fail to start. (https://www.mulesoft.org/jira/browse/MULE-16829[MULE-16829])
+// ------------------------------- 
+// - 1.1.10
+// -------------------------------
+* Race condition in prestartCoreThreads for a Scheduler. (https://www.mulesoft.org/jira/browse/MULE-16858[MULE-16858])
 //  
 // ------------------------------- 
 // - Enhancement Request Issues 
