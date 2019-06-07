@@ -1,0 +1,188 @@
+// Product_Name Version number/date Release Notes 
+= Mule Runtime 4.1.6 Release Notes 
+:keywords: mule, 4.1.6, runtime, release notes 
+ 
+*July 15, 2019*
+
+// // <All sections are required. If there is nothing to say, then the body text in the section should read, â€œNot applicable.â€ 
+link:http://s3.amazonaws.com/new-mule-artifacts/mule-ee-distribution-standalone-4.1.6.zip[Download Mule 4.1.6 EE Distribution] 
+// <This section lists all the major new features available with this latest version. Do not provide links to documentation and do not use images, which make reusing the release note content more difficult.> 
+////
+== New Features and Enhancements
+
+* <TO_COMPLETE>
+////
+ 
+Mule Runtime 4.1.6 includes the following enhancements, changes, and fixes: 
+ 
+== Changes
+
+Not applicable.
+
+== Known Limitations and Workarounds
+
+Not applicable.
+
+== Upgrade Requirements
+
+Not applicable.
+ 
+== Fixed Issues 
+ 
+[%header,cols="15a,85a"] 
+|===
+|Issue |Description
+// Fixed Issues 
+| MULE-16964 | TryScope with no tx fails within subFlow+async 
+| MULE-16897 | No primary node notification listener set on extension sources with cluster support 
+| MULE-16896 | Bound connections not released on TransactionException 
+| MULE-16894 | IllegalStateException in Polling Source when cluste node is shutting down 
+| MULE-16891 | flowTrace OoM when using foreach with large collections 
+| MULE-16878 | StringToEnum Transformer should have different names for each extensionModel 
+| MULE-16872 | Async in a transaction executes in the same thread as the transaction 
+| MULE-16856 | Starting a flow should fail when a task is rejected from scheduler. 
+| MULE-16853 | ConfigurationProperties does not honor properties hierarchy when having prop resolved with placeholder 
+| MULE-16841 | Password mask regex does not consider dw and non-literal expressions. 
+| MULE-16831 | Fix XA transactions with bitronix 
+| MULE-16830 | Global Properties are taking precedence over Application Properties 
+| MULE-16824 | LazyInit should initialize the Mule configuration at part of the component initializations phase 
+| MULE-16817 | Pooled connections are not removed from the pool when they should evict. 
+| MULE-16790 | Global ErrorHandler does not resolve transaction 
+| MULE-16784 | MuleClassLoaderLookupPolicy wrongly assumming `javax.xml.bind.attachment` as system package in Java 11 
+| MULE-16775 | OnErrorPropagate in global error handler is not rollbacking tx 
+| MULE-16758 | Multithreaded sources are concurrently reconnected more than once 
+| MULE-16753 | A transaction is not available error related to execution on a cpuLight thread 
+| MULE-16744 | `spring.schemas` exported from runtime conflict with spring dependencies used in an app 
+| MULE-16730 | Interception API: Validation all throws NullPointerException 
+| MULE-16725 | Fix race condition in flow lifecycle handling 
+| MULE-16689 | Lightweight class loader model builder cannot resolve a pom as it doesn't have the remote repositories from mule application where it was declared the dependency 
+| MULE-16672 | org.mule.runtime.api.util.ResourceLocator is caching resources and it nos working with SNAPSHOT dependencies 
+| MULE-16657 | Metaspace leak when generating dynamic configurations 
+| MULE-16636 | CursorProvider is retained too long when cursors are opened but not consumed 
+| MULE-16634 | Source completion callback not called on failure 
+| MULE-16621 | JMS with XA transaction stops consuming message on TX timeout 
+| MULE-16614 | Some core classes do not generate any logs 
+| MULE-16600 | Lazy Init: websockets:config is unable to find http:listener-config 
+| MULE-16581 | Runtime does not shutdown after OptionalLong[15000] milliseconds 
+| MULE-16580 | Spring Bean 3.1 XSD definition being downloaded instead of taken from the classpath 
+| MULE-16577 | Parse Template not parsing correctly when expression manager returns value with # char 
+| MULE-16571 | Externalize log4j2.xml file in Mule 4 domain descriptor cannot be cast to application descriptor 
+| MULE-16545 | Exception ignored in Operators#nullSafeMap 
+| MULE-16540 | AuthorizationCodeState not updated on certain circumstances 
+| MULE-16524 | Before method is not called for interception API when having RequiredParameterValueResolvers with failing expression 
+| MULE-16519 | Avoid propagating InterruptedException in processingStragy dispose 
+| MULE-16514 | Persistent Partiion Store should delete partiition directory on dispose 
+| MULE-16503 | Found modules names not being logged by DefaultModuleRepository  
+| MULE-16500 | Janitor must be closed so that taken byte arrays are freed when ghostbuster applied 
+| MULE-16483 | Mule Domain is not disposing its RegionClassLoader 
+| MULE-16480 | Incorrect behavior of Logger component when handling backslashes 
+| MULE-16455 | Name attribute on flow-ref is missing after deserializing from XML 
+| MULE-16449 | NoSuchElementException on policies with SDK routers 
+| MULE-16435 | Extension operations logging in domain instead of app 
+| MULE-16422 | MuleArtifactClassLoader does not find resources with spaces when using resource:: syntax. 
+| MULE-16396 | OnErrorPropagate should only rollback owned transactions 
+| MULE-16392 | Fix ProcessingStrategies backpressureOnInnerCpuIntensiveSchedulerBusy flaky test 
+| MULE-16330 | Logging consumes too much CPU 
+| MULE-16320 | Remove overhead in event/message creation handling in policies 
+| MULE-16319 | Container classloader in embedded mode must have the embedded container classloader as parent 
+| MULE-16314 | NPE if object store is expired without maxEntries limit 
+| MULE-16310 | Backpressure strategy for scheduler sources must be FAIL 
+| MULE-16308 | Local authentication doesn't prevail when there're multiple "WWW-Authenticate" headers 
+| MULE-16307 | Reconnection Strategy model doesn't communicate the "Blocking" parameter 
+| MULE-16298 | Redeployment fails due to file descriptor leaks when loading class model loader 
+| MULE-16294 | Paged Operations doesn't apply Connection Lifecycle correctly 
+| MULE-16288 | Fix flaky ValidShutdownTimeoutRequestResponseTestCase and ExpiredShutdownTimeoutRequestResponseTestCase 
+| MULE-16283 | Add JDK cryptography extension explanation for Secure Properties Tool doc 
+| MULE-16282 | ProcessingStrategies not working when scheduler raises REE 
+| MULE-16275 | Fix performance degradation introduced by MULE-16040 
+| MULE-16260 | Gatekeeper policy causes memory leak on policy engine 
+| MULE-16259 | LazyMuleArtifactContext leaves schedulers not stopped when using sub-flows 
+| MULE-16248 | on prem removal of .anchor file doesn't delete application from /apps folder on Windows 
+| MULE-16230 | VersionFormatArtifactDescriptorValidator fails due to MavenBundleDescriptorLoader is not considering the effective pom model to read the version property 
+| MULE-16221 | HTTP:CONNECTIVITY error thrown from WSC hangs execution in CompositeProcessorChainRouter 
+| MULE-16219 | idempotent-message-validator does not generate a unique ID per component 
+| MULE-16218 | Interception API: Smart connectors inside subflow are not skipped properly 
+| MULE-16208 | Find resources is not taking into account lookup of files by directory 
+| MULE-16205 | IdempotentRedeliveryPolicy blocks CPU_LITE thread 
+| MULE-16198 | Deployment for app with HTTP fails when no internet connection 
+| MULE-16185 | Lazy Init: NPE when initializing subflow twice with until-successful 
+| MULE-16172 | Invalid extension model/xsd generated for enum 
+| MULE-16159 | ProcessingStrategy internal bufferSize is always 256 for flow-ref  
+| MULE-16140 | Source On Error callback is not called when an error occurs on the OnError Flow Handlers 
+| MULE-16103 | Wrong key name is generated by the icons service in Windows 
+| MULE-15994 | Executions inside Async scope uses Ring Buffer Threads 
+| MULE-15976 | Backpressure: WAIT strategy does not work with WorkQueueProcessor 
+| MULE-15932 | System dependent line separators should be used for building Mule exception summary message 
+| MULE-15861 | Artifact declaration looses Mule "object" elements 
+| MULE-15860 | Extension model for Mule core does not contain 'object' construct 
+| MULE-15599 | Serializing an artifact model constructed from serializing a JSON loses data 
+| MULE-15574 | Mule Runtime fails to run batch jobs after stopping app while debugging 
+| MULE-15460 | Shared dependencies' dependencies are not shared 
+| EE-6780 | Corrupt patches not applied but logged as applied 
+| EE-6779 | BitronixTransactionManager built before QueueManager initialize causes NPE 
+| EE-6769 | Possible race condition when registering ConnectionFactory in Bitronix 
+| EE-6710 | Batch RecordFilteringStrategy is not filtering correctly 
+| EE-6682 | Table name transforms in cluster object store are only working for postgresql 
+| EE-6681 | Avoid casts to String in JdbcMapStore 
+| EE-6680 | Escape table names in DefaultDatabaseStoreQueryBuilderStrategy 
+| EE-6670 | Setting Batch History property throws org.springframework.beans.NotWritablePropertyException: Invalid property 'annotations' 
+| EE-6664 | Shutting down cluster node(s) causes data corruption in JdbcMapStore 
+| EE-6579 | Event states leaked in DefualtPolicyStateHandler 
+| EE-6565 | NoSuchElementException on mule-http-caching-policy 
+| EE-6558 | Mule 4 AMQP Listener scenario stops working after a few seconds 
+| EE-6535 | Fix BatchStopTestCase flaky test 
+| EE-6377 | Batch Aggregator does not support JSON Payload 
+| AGW-3143 | Fix Class Loader Issues generated by getLoggingClassLoader.
+| AGW-3142 | Upgrading policy version is not using new policy jar
+| AGW-3061 | Fix DistributedApiConfigurationCache to be JdbcMapStore compatible
+| AGW-3010 | Change Max Cache Size for Federation Policies
+| AGW-2927 | Change policyId sent to analytics from a Integer to a String
+| AGW-2909 | Send mule version each time policies are requested
+| AGW-2852 | Add local contract database reset in case of corruption.
+| AGW-2848 | When GateKeeper enabled, and a POST / PUT is sent, payload is echoed
+| AGW-2826 | NullPointerException when disposing runtime in slave node
+| AGW-2810 | Content-Length header is not used in Analytics payload size
+| AGW-2794 | IP not being sent to analytics with latest HTTP Connector
+| AGW-2707 | NullPointerException when shutting down secondary node
+| AGW-2485 | Reflection used in Analytics is hurting performance
+//
+// -----
+// -DataWeave
+// -----
+| DataWeave a|
+* Fixes #423 Optional should be supported in expected data type and java bridge
+* Adding a property for escaping CR in the xml writer
+* Fix for SE-11717. char CR should not be escaped in xml
+* Fix for SE-11664. Bug in indexed xml reader parsing root elements with only text
+* Fix SE-11527 support for dynamic ns
+* Fixes SE-9379. Fix issue that was casing the delete of file
+* Fix SE-11246. Avoid file leaks
+* Fixes #401. Propagate multipart schema properties
+* Fixes SE-10844. Use always UTF-8 for loading weave files
+* Fixes SE-10844. Use always UTF-8 for loading weave files
+* SE-10706 (#391)
+* Replacing mutable.HashMap for ConcurrentHashMap in JavaBeanHelper
+* Avoid memory leaks on logger, and mule typed values
+* [rn] Fix SE-10548. Improve distinctyBy memory usage. 1. Make it lazy 2. Don't materialize in advance the entire input
+* Fixes #381. Fixed boolean support for header names too
+* Fixes #381. Excel reader issue reading boolean values
+* [rn] Fixes SE-9664. Fix type inference problem what throwing empty.reduceLeft exception
+* [js] Fix for #358. Related to PROJECTX-4033. Error when setting literals to root arrays 
+//  
+// ------------------------------- 
+// - Enhancement Request Issues 
+// ------------------------------- 
+| MULE-16954 | Improve logging infrastructure performance 
+| MULE-16881 | migrate app deployment file to 4.1 
+| MULE-16851 | Implement CompositeConverter#toString to aid in transformers troubleshooting 
+| MULE-16755 | ObjectStore expire: account for inconsistencies that may occur in cluster 
+| MULE-16569 | TestConnectivity should be less verbose 
+| MULE-16529 | Performance improvements in flowstack 
+| MULE-16445 | XML SDL: Support camelized names in operations 
+| MULE-16212 | Avoid copying the whole event when just setting internal variables 
+| MULE-14161 | Add logging on the smart connector's code 
+| EE-6760 | Make Bitronix XA connection pool configurable 
+|=== 
+ 
+This version of Mule runtime is bundled with the Runtime Manager Agent plugin version 2.1.9. 
+ 
