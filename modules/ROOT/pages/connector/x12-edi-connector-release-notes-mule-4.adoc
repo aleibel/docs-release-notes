@@ -13,7 +13,8 @@ Support Category: Premium
 
 === Fixed in this Release
 
-* Improved error reporting for write operations. (SE-10716)
+* Improved error reporting for write operations. (SE-10716, SE-10725)
+* Corrected metadata representation of repeated objects.
 
 === Compatibility
 
