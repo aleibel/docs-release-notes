@@ -8,6 +8,9 @@ endif::[]
 
 *Apr 26, 2019*
 
+=== Module version compatibility
+*Secure Configuration Properties 1.1.0*
+
 === Minimum Mule Version
 
 *Mule 4.1.0*
