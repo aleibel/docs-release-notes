@@ -1,0 +1,109 @@
+// Product_Name Version number/date Release Notes 
+= Mule Runtime 4.2.1 Release Notes 
+:keywords: mule, 4.2.1, runtime, release notes 
+ 
+// // <All sections are required. If there is nothing to say, then the body text in the section should read, â€œNot applicable.â€ 
+link:http://s3.amazonaws.com/new-mule-artifacts/mule-ee-distribution-standalone-4.2.1.zip[Download Mule 4.2.1 EE Distribution] 
+// <This section lists all the major new features available with this latest version. Do not provide links to documentation and do not use images, which make reusing the release note content more difficult.> 
+
+== New Features and Enhancements 
+  
+Mule Runtime 4.2.1 includes the following enhancements, changes, and fixes: 
+ 
+* <TO_COMPLETE> 
+ 
+ 
+== Changes 
+ 
+* <TO_COMPLETE> 
+ 
+ 
+== Known Limitations and Workarounds 
+ 
+[%header,cols="15a,85a"] 
+|===
+|Issue |Description
+| MULE-17020 | Interception API: Smart connectors inside async are not skipped properly 
+| MULE-17018 | Extensions Dynamic configs can not handle expressions with encoded characters 
+|=== 
+ 
+== Upgrade Requirements 
+ 
+[%header,cols="15a,85a"] 
+|===
+|Issue |Description
+// <TO COMPLETE> 
+|=== 
+ 
+== Fixed Issues 
+ 
+[%header,cols="15a,85a"] 
+|===
+|Issue |Description
+// Fixed Issues 
+| MULE-17007 | @OutputJsonType does not set metadata type id 
+| MULE-16995 | Shared runtime deps in app mess up classloading 
+| MULE-16991 | Race condition when invalidating cached connections 
+| MULE-16986 | XA Transactions fail to rollback on ConnectionException 
+| MULE-16983 | Reconnection should not retry when resource has joined active transaction 
+| MULE-16982 | ArrayOutOfBoundException when creating custom scheduler 
+| MULE-16967 | Database bulk parameters missing on artifact declaration generated from mule-config 
+| MULE-16964 | TryScope with no tx fails within subFlow+async 
+| MULE-16952 | Publisher returned by applyWithChildContext not completed when source is completed 
+| MULE-16936 | Mule 4 JMS Bridge (ActiveMQ) scenario stops working after a certain time 
+| MULE-16899 | ClassCast exception when registry lookup finds no match 
+| MULE-16897 | No primary node notification listener set on extension sources with cluster support 
+| MULE-16896 | Bound connections not released on TransactionException 
+| MULE-16894 | IllegalStateException in Polling Source when cluste node is shutting down 
+| MULE-16892 | Error handler being executed twice when flow ref is involved 
+| MULE-16891 | flowTrace OoM when using foreach with large collections 
+| MULE-16878 | StringToEnum Transformer should have different names for each extensionModel 
+| MULE-16872 | Async in a transaction executes in the same thread as the transaction 
+| MULE-16856 | Starting a flow should fail when a task is rejected from scheduler. 
+| MULE-16853 | ConfigurationProperties does not honor properties hierarchy when having prop resolved with placeholder 
+| MULE-16847 | MessageProcessors.processWithChildContext must complete the EventContext 
+| MULE-16841 | Password mask regex does not consider dw and non-literal expressions. 
+| MULE-16836 | Cannot find snapshot artifact via resource loader when trying to scaffold an API 
+| MULE-16831 | Fix XA transactions with bitronix 
+| MULE-16830 | Global Properties are taking precedence over Application Properties 
+| MULE-16824 | LazyInit should initialize the Mule configuration at part of the component initializations phase 
+| MULE-16790 | Global ErrorHandler does not resolve transaction 
+| MULE-16784 | MuleClassLoaderLookupPolicy wrongly assumming `javax.xml.bind.attachment` as system package in Java 11 
+| MULE-16775 | OnErrorPropagate in global error handler is not rollbacking tx 
+| MULE-16758 | Multithreaded sources are concurrently reconnected more than once 
+| MULE-16753 | A transaction is not available error related to execution on a cpuLight thread 
+| MULE-16744 | `spring.schemas` exported from runtime conflict with spring dependencies used in an app 
+| MULE-16730 | Interception API: Validation all throws NullPointerException 
+| MULE-16725 | Fix race condition in flow lifecycle handling 
+| MULE-16657 | Metaspace leak when generating dynamic configurations 
+| MULE-15599 | Serializing an artifact model constructed from serializing a JSON loses data 
+| MULE-16833 | Optimize resolution of payload and attributes default parameters 
+| MULE-16808 | Update Apache Ant to at least 1.9.12 in 3.x 
+| MULE-16713 | Support application/java payloads in redelivery-policy 
+| EE-6804 | Bitronix Proxy hides connectivity exceptions 
+| EE-6797 | Bitronix exception when redeploying an app using XA transactions 
+| EE-6796 | Dirty Bitronix transaction log 
+| EE-6780 | Corrupt patches not applied but logged as applied 
+| EE-6779 | BitronixTransactionManager built before QueueManager initialize causes NPE 
+| EE-6774 | Memory leak on com.mulesoft.mule.runtime.bti.internal.xa.QueueManagerXaResourceProducer 
+| EE-6769 | Possible race condition when registering ConnectionFactory in Bitronix 
+| EE-6710 | Batch RecordFilteringStrategy is not filtering correctly 
+| EE-6773 | Leak of QueueSessionResourceHolder's: Add troubleshooting information 
+| EE-6736 | Update hazelcast to at least 3.12.x in 4.x 
+| EE-6704 | Add System Property to set some bitronix logs to debug 
+//  
+// ------------------------------- 
+// - Enhancement Request Issues 
+// ------------------------------- 
+| MULE-16990 | Improve troubleshooting logging for XA transaction 
+| MULE-16937 | SDK should no longer that at least one Content parameter to be primary 
+| MULE-16909 | Support custom parameters in OAuth Dance 
+| MULE-16908 | Support Client Credentials gran type in the SDK 
+| MULE-16881 | migrate app deployment file to 4.1 
+| MULE-16851 | Implement CompositeConverter#toString to aid in transformers troubleshooting 
+| MULE-16755 | ObjectStore expire: account for inconsistencies that may occur in cluster 
+| EE-6760 | Make Bitronix XA connection pool configurable 
+|=== 
+ 
+This version of Mule runtime is bundled with the Runtime Manager Agent plugin version 2.3.0. 
+ 
